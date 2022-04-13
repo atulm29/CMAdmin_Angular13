@@ -1,0 +1,24 @@
+<div class="leftnav">
+  <div class="logo">
+      <a href="dashboard" alt="Dashboard" title="Dashboard">
+          <span class="small_logo">
+              <img id="ancLogoNewSmall"  src="../../../assets/images/logosmall.png" alt="" /></span>
+          <span class="large_logo">
+              <img id="ancLogoNew"  src="../../../assets/images/logo.png" alt="" /></span>
+      </a>
+  </div>
+  <nav id="LeftnavBar" class="nav"> 
+  </nav>
+</div>
+
+<div style="margin-left: var(--leftpanel-width);">
+  <div class="d-flex align-items-center page-header" id="dvTopBar" >
+    <div class="page-header-title-wrap">
+        <h2 class="page-header-title">Welcome, {{ currentUser.originalUserName }}</h2>
+    </div>
+
+    <div class="ms-auto">
+        <a id="a_LogOut" class="icon-logout" [routerLink]=""  clientidmode="Static"  (click)="logout();">Sign out</a>
+    </div>
+  </div>
+</div>

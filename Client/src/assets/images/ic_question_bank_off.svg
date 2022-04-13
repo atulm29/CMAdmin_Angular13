@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="48" viewBox="0 0 55 48">
+  <g id="ic_question_bank_off" transform="translate(-84 -31)">
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="55" height="48" transform="translate(84 31)" fill="rgba(255,255,255,0)"/>
+    <g id="Group_1768" data-name="Group 1768" transform="translate(101 45)">
+      <path id="Path_930" data-name="Path 930" d="M12.5,2.5a10,10,0,1,0,10,10A10.009,10.009,0,0,0,12.5,2.5Zm0,18.084A8.084,8.084,0,1,1,20.584,12.5,8.086,8.086,0,0,1,12.5,20.584Z" transform="translate(-2.5 -2.5)" fill="#682875"/>
+      <path id="Path_931" data-name="Path 931" d="M36.525,23.8a3.505,3.505,0,0,0-3.642,3.158.547.547,0,0,0,.547.611h.863a.524.524,0,0,0,.526-.463,1.763,1.763,0,0,1,3.2-.589,1.253,1.253,0,0,1-.084,1.326,3.028,3.028,0,0,1-.821.758A2.877,2.877,0,0,0,35.7,31.105a.554.554,0,0,0,.547.589h.842a.549.549,0,0,0,.547-.505,1.029,1.029,0,0,1,.589-1.011,4.9,4.9,0,0,0,1.263-1.2,3.2,3.2,0,0,0,.253-3.347A3.542,3.542,0,0,0,36.525,23.8Z" transform="translate(-26.483 -19.316)" fill="#682875"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="1.179" cy="1.179" r="1.179" transform="translate(8.989 13.158)" fill="#1d2858"/>
+    </g>
+  </g>
+</svg>

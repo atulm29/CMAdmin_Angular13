@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f3f7fc;
+        stroke: #ddd;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #333;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_193" data-name="Group 193" transform="translate(-405 -669)">
+    <g id="Rectangle_216" data-name="Rectangle 216" class="cls-1" transform="translate(405 669)">
+      <path class="cls-3" d="M0,0H42a4,4,0,0,1,4,4V31a4,4,0,0,1-4,4H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z"/>
+      <path class="cls-4" d="M1,.5H42A3.5,3.5,0,0,1,45.5,4V31A3.5,3.5,0,0,1,42,34.5H1A.5.5,0,0,1,.5,34V1A.5.5,0,0,1,1,.5Z"/>
+    </g>
+    <g id="Group_48" data-name="Group 48" transform="translate(-88 219.5)">
+      <g id="Rectangle_215" data-name="Rectangle 215" class="cls-2" transform="translate(505 457.734)">
+        <rect class="cls-3" width="22.339" height="20.552" rx="3"/>
+        <rect class="cls-4" x="0.5" y="0.5" width="21.339" height="19.552" rx="2.5"/>
+      </g>
+      <line id="Line_8" data-name="Line 8" class="cls-2" x2="21.446" transform="translate(505.447 463.542)"/>
+      <g id="Group_47" data-name="Group 47" transform="translate(511.255 455.5)">
+        <line id="Line_9" data-name="Line 9" class="cls-2" y2="5.361"/>
+        <line id="Line_10" data-name="Line 10" class="cls-2" y2="5.361" transform="translate(9.829)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,144 @@
+label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .alert{padding: 0.2rem 0.2rem;}
+  .card-container.card {
+    max-width: 400px !important;
+    padding: 40px 40px;
+  }
+  
+  .card {
+    background-color: #f7f7f7;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  .field-error { border: 1px solid red;}
+
+  /* =============== login Page style =============== */
+
+.login-Page {
+  background-color: var(--login-bg-color);
+}
+
+  .login-Page .mainlogin-container {
+      max-width: 330px;
+      min-height: 100vh;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+      .login-Page .mainlogin-container .form-container .form-header {
+          text-align: center;
+          padding: 10px 10px 30px;
+      }
+
+  .login-Page .form-header img {
+      display: inline-block;
+      max-width: 50%;
+      height: auto;
+      max-height: 50px;
+  }
+
+  .login-Page .form-container .form-body {
+      position: relative;
+      background-color: #fff;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+  }
+
+  .login-Page .form-body form {
+      padding: 0;
+      background-color: #fff;
+  }
+
+  .login-Page .form-body .form-wrapper {
+      padding: 25px 40px 5px 40px;
+  }
+
+  .login-Page .form-wrapper .form-group {
+      position: relative;
+      margin-bottom: 25px;
+  }
+
+      .login-Page .form-wrapper .form-group label {
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 1.5;
+          letter-spacing: .083em;
+          color: var(--login-form-label-color);
+          text-transform: uppercase;
+          margin-bottom: 5px;
+      }
+
+  .login-Page .form-wrapper .form-control {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--body-text-color);
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid #EBEDF5;
+      border-radius: 0;
+      height: auto;
+      padding: 5px 0;
+  }
+
+  .login-Page .form-wrapper .form-group .label.label-danger {
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      width: 100%;
+      font-size: 80%;
+      color: #dc3545;
+  }
+
+  .login-Page .form-body .instructorbtn {
+      padding: 0;
+  }
+
+      .login-Page .form-body .instructorbtn .logInbtn {
+          display: inline-block;
+          font-size: 16px;
+          font-weight: 700;
+          color: var(--login-btn-text-color);
+          text-align: left;
+          text-transform: uppercase;
+          letter-spacing: .0625em;
+          padding: 20px 40px;
+          border-radius: 0;
+          background-color: var(--login-btn-bg-color);
+          width: 100%;
+          background-image: url('../../../assets/images/icon-arrow-right-white.svg');
+          background-repeat: no-repeat;
+          background-position: right 40px center;
+          background-size: 6px;
+      }
+
+          .login-Page .form-body .instructorbtn .logInbtn:hover {
+              background-color: var(--login-btn-bg-hover-color);
+          }
+
+/* =============== login Page style End =============== */

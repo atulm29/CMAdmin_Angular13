@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="ic_PPT_off" transform="translate(-109 -397)">
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="25" height="25" transform="translate(109 397)" fill="rgba(255,255,255,0)"/>
+    <g id="Group_168" data-name="Group 168" transform="translate(-1320 -1871)">
+      <path id="Path_1200" data-name="Path 1200" d="M20,20H0V0H20ZM1.94,18H18.08V2H1.94" transform="translate(1432 2271)" fill="#212c5b"/>
+      <path id="Path_1201" data-name="Path 1201" d="M35.2,35.6H32.7V26h3.98a3.416,3.416,0,0,1,2.48.84,3.112,3.112,0,0,1,.86,2.36,3.112,3.112,0,0,1-.86,2.36,3.416,3.416,0,0,1-2.48.84H35.2Zm0-5.2h.82q1.38,0,1.38-1.2T36.02,28H35.2Z" transform="translate(1405.84 2250.2)" fill="#212c5b"/>
+    </g>
+  </g>
+</svg>

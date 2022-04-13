@@ -1,0 +1,143 @@
+<div class="content-wrapper">
+
+  <div class="d-flex align-items-center content-header" id="dvTopBar" >
+    <div class="content-header-title-wrap">
+        <h1 class="content-header-title">Organizations</h1>
+    </div>
+
+    <div class="ms-auto">
+      <button class="btn btn-primary" (click)="open(mymodal)">Add Organization</button>
+    </div>
+  </div>
+
+  <div class="filter-container">
+    <div class="form-row align-items-end">
+      <form [formGroup]="OrgDropDownListForm" (ngSubmit)="onSubmit()">
+        <span id="CP_spnGroupName" class="seltitle">Organization</span>
+        <div class="row" style="margin-top: 5px;">
+        <div class="form-group col-md-2">       
+            <select formControlName="name" [(ngModel)]="title" class="form-control orgselect" >
+              <option [value]="0">All</option>
+              <option [value]="item.groupId" *ngFor="let item of OrganizationDropDownList"> {{item.groupName}}</option>
+            </select>       
+        </div>
+        <div class="form-group col-md-2 p-0">
+          <button class="btn btn-secondary">Apply Filter</button>
+        </div>
+      </div>
+    </form> 
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="row">
+        <div class="col-6"></div>
+        <div class="col-6">
+          <div class="scorePaginatio nameorclass">
+            <div class="row">
+              <div class="pageSize col-2">
+                <span class="Pagingname">Page Size</span>
+                <select (change)="handlePageSizeChange($event)" class="ddlPaging ddlPagingsecond">
+                  <option *ngFor="let size of pageSizes" [ngValue]="size">
+                    {{ size }}
+                  </option>
+                </select>
+              </div>
+              <div class="pageSize col-8">
+                <span class="Pagingname">{{totalRecordsText}}</span>
+                <pagination-controls
+                    previousLabel="Prev"
+                    nextLabel="Next"
+                    [maxSize]="5"
+                    (pageChange)="handlePageChange($event)">
+                </pagination-controls> 
+              </div>
+              <div class="pageSize col-2">
+                <span class="Pagingname"></span>
+                <select (change)="onChange($event)" [(ngModel)]="selectedPageAccess" class="ddlPaging ddlPagingsecond mt-19px">
+                  <option  *ngFor="let item of pagingAccessList" >
+                    {{ item.value }}
+                  </option>
+                </select>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>   
+  </div>
+  <div class="row"><span>{{organizationSucessMsg}}</span></div>
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table tablebg table-bordered table-instituteReport">
+        <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>{{ this.THData.groupConfigLabel }}</th>
+            <th>{{ this.THData.instituteLabelConfig }}</th>
+            <th>{{ this.THData.instructorLabelConfig }}</th>
+            <th>{{ this.THData.subScribeStudentLabelConfig }}</th>
+            <th>{{ this.THData.trialStudentLabelConfig }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            *ngFor="let item of OrganizationList | paginate : {
+                      itemsPerPage: pageSize,
+                      currentPage: page,
+                      totalItems: count
+                    }; let i = index" >
+            <td>{{ item.rowNum }}</td>        
+            <td>{{ item.groupName }}</td>
+            <td>{{ item.totalInstitute }}</td>
+            <td>{{ item.instructorCount }}</td>
+            <td>{{ item.paidStudentCount }}</td>
+            <td>{{ item.trialStudentCount }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+   <!--form modal-->
+<ng-template #mymodal let-modal>
+  <div class="box box-solid ">
+    <div class="professorLoginPanel popupsec">
+        <div class="studentEditClBtn">
+            <button ID="btnClose"  class="btn-close" (click)="closePupUp()">X</button>
+        </div>
+        <div class="title_form" id="h3_Group"> Add Organization</div>
+        <div class="p-4">
+          <form [formGroup]="orgnizationForm" (ngSubmit)="addOrganization()">
+            <div class="form-group mt-2" *ngIf="submitted && isOrganizationFailed">
+              <div  class="alert alert-danger" role="alert" >
+                {{ errorMessage }}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <span id="lblOrganizationName">Organization Name</span>
+                <input type="text" class="form-control" formControlName="groupName"
+                name="groupName" [ngClass]="{ 'is-invalid': submitted && orgF['groupName'].errors }" />
+                <div *ngIf="submitted && orgF['groupName'].errors" class="invalid-feedback">
+                  <div *ngIf="orgF['groupName'].errors['required']">Please enter Organization Name</div>                
+                </div>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-12">
+                <span id="lblInDesign">InDesign Organization</span> &nbsp;&nbsp;
+                <input type="checkbox"  (change)="onCheckboxChange($event)" />
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <button id="btnAdd" type="submit" class="btn btn-primary" >Add</button> &nbsp;
+                <button id="btnCancel" type="button" class="btn btnCancel"  (click)="closePupUp()">Cancel</button> 
+              </div>
+            </div>
+          </form>
+        </div>
+   </div>
+  </div>
+</ng-template>

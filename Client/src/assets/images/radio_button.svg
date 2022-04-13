@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #95989a;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="radio_button" transform="translate(-129 -170)">
+    <g id="Ellipse_10" data-name="Ellipse 10" class="cls-1" transform="translate(129 170)">
+      <circle class="cls-2" cx="9" cy="9" r="9"/>
+      <circle class="cls-3" cx="9" cy="9" r="8.5"/>
+    </g>
+  </g>
+</svg>

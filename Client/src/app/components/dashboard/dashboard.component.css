@@ -1,0 +1,228 @@
+.admin-card-wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+    .admin-card-wrapper .admin-card {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+        padding: 15px;
+        height: 128px;
+        box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+        transition: box-shadow 0.3s ease;
+    }
+
+        .admin-card-wrapper .admin-card:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, .23), 0 3px 5px rgba(0, 0, 0, .3);
+        }
+
+        .admin-card-wrapper .admin-card.user-info-box {
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: 30%;
+            background-image: url('/assets/images/dashboard-icons/icon-account-selected.svg');
+            cursor: default;
+        }
+
+.admin-card.user-info-box .card-title-top {
+    font-size: 14px;
+    color: var(--card-title-color);
+}
+
+.admin-card.user-info-box .card-count {
+    display: block;
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--card-count-color);
+}
+
+.admin-card.link-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .admin-card.link-card .icon {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+
+    .admin-card.link-card .card-title {
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+    }
+
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-yellow {
+    background-color: #F19E09;
+}
+
+.admin-card.link-card.bg-yellow .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-organization.svg');
+}
+
+.bg-skyblue {
+    background-color: #2C8BCA;
+}
+
+.admin-card.link-card.bg-skyblue .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-institute-management.svg');
+}
+
+.bg-purple {
+    background-color: #682875;
+}
+
+.admin-card.link-card.bg-purple .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-instructor.svg');
+}
+
+.bg-green {
+    background-color: #70A94F;
+}
+
+.admin-card.link-card.bg-green .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-course.svg');
+}
+
+.bg-red {
+    background-color: #0199D6;
+}
+
+.admin-card.link-card.bg-red .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-student.svg');
+}
+
+.bg-mintGreen {
+    background-color: #1A3768;
+}
+
+.admin-card.link-card.bg-red .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-student.svg');
+}
+
+.admin-card.link-card.surveyforms {
+    background-color: #F3B120;
+}
+
+    .admin-card.link-card.surveyforms .icon {
+        background-image: url('/assets/images/dashboard-icons/icon-survey-form.svg');
+    }
+
+.bg-qubankblue {
+    background-color: #A8989C;
+}
+
+.admin-card.link-card.bg-qubankblue .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-quetionbank.svg');
+}
+
+.bg-certification {
+    background-color: #99289D;
+}
+
+.admin-card.link-card.bg-certification .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-institute-management.svg');
+}
+
+.admin-card.link-card.QBankWorkflow {
+    background-color: #5982A6;
+}
+
+    .admin-card.link-card.QBankWorkflow .icon {
+        background-image: url('/assets/images/dashboard-icons/icon-card-questionBankWorkflow.svg');
+    }
+
+.admin-card.link-card.Assetmanagement {
+    background-color: #ED7625;
+}
+
+    .admin-card.link-card.Assetmanagement .icon {
+        background-image: url('/assets/images/dashboard-icons/icon-card-lomangament.svg');
+    }
+
+.admin-card.link-card.AssetAuthoringWorkflow {
+    background-color: #5982A6;
+}
+
+    .admin-card.link-card.AssetAuthoringWorkflow .icon {
+        background-image: url('/assets/images/dashboard-icons/icon-card-assetAuthoringWorkflow.svg');
+    }
+
+.bg-certification {
+    background-color: #682875;
+}
+
+.admin-card.link-card.bg-certification .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-certificate.svg');
+}
+
+.bg-services {
+    background-color: #E64783;
+}
+
+.admin-card.link-card.bg-services .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-services.svg');
+}
+
+.bg-ReportBuilder {
+    background-color: #0199D6;
+}
+
+.admin-card.link-card.bg-ReportBuilder .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-reportbuilder.svg');
+}
+
+.bg-switchtoscorecard {
+    background-color: #545E67;
+}
+
+.admin-card.link-card.bg-switchtoscorecard .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-report.svg');
+}
+
+.bg-licenseCourseMetaMaster {
+    background-color: #5F3BBF;
+}
+
+.admin-card.link-card.bg-licenseCourseMetaMaster .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-licenseCourseMetaMaster.svg');
+}
+
+.EventTileCss {
+    background-color: #FF4E3E;
+}
+
+.admin-card.link-card.EventTileCss .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-events.svg');
+}
+.bg-community {
+    background-color: #0090A8;
+}
+
+.admin-card.link-card.bg-community .icon {
+    background-image: url('/assets/images/dashboard-icons/icon-card-community.svg');
+}
+.h4, h4 {
+    font-size: 14px;
+    color: #fff;
+}
+a {
+    display: inline-block;
+    color: var(--anchor-clr);
+    text-decoration: none;
+}
+

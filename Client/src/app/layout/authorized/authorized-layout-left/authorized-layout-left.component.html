@@ -1,0 +1,20 @@
+<div  [ngClass]="leftnav" (mouseover)="changeStyle($event)" (mouseout)="changeStyle($event)">
+    <div class="logo">
+        <a href="dashboard" alt="Dashboard" title="Dashboard">
+            <span class="small_logo">
+                <img id="ancLogoNewSmall" runat="server" src="../../../assets/images/logosmall.png" alt="" /></span>
+            <span class="large_logo">
+                <img id="ancLogoNew" runat="server" src="../../../assets/images/logo.png" alt="" /></span>
+        </a>
+    </div>
+   <nav id="LeftnavBar" class="nav">
+    <a  *ngFor="let item of leftNavMenuList"  id="{{item.tabName}}" href="{{item.url}}" title="{{item.alias}}">
+      <span class="{{item.leftCssClass}}"></span> 
+      <span class="LeftNavText">{{item.alias}}</span>
+    </a>
+    <a  id="Logout" href="login"  title="Logout" (click)="logout();">
+      <span class="nav-link pt-3 pb-3 text-center Logoutnav"></span> 
+      <span class="LeftNavText">Logout</span>
+    </a>
+  </nav>
+</div>

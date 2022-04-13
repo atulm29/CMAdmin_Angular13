@@ -1,0 +1,86 @@
+<div class="content-wrapper">
+
+    <div class="d-flex align-items-center content-header" id="dvTopBar" >
+      <div class="content-header-title-wrap">
+          <h1 class="content-header-title">Admin Users</h1>
+      </div>
+  
+      <div class="ms-auto">
+        <button class="btn btn-primary" (click)="AddNewRole()">Add New Role</button>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg mt-3 navbar-light mb-3">
+      <div class="navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item" id="menuRole">
+                  <a id="CP_roles" class="navactive" href="adminroles">Roles</a>
+              </li>
+  
+              <li class="nav-item " id="menuUsers">
+                  <a id="CP_users" class="nav-link" href="adminusers">Users</a> 
+              </li>
+              <li class="nav-item " id="importUser">
+                  <a id="CP_importUsers" class="nav-link" href="adminuserimports">Import</a> 
+              </li>
+          </ul>
+      </div>
+    </nav>
+    <div class="row clearfix">
+      <div class="col-sm-12">
+        <form [formGroup]="OrgDropDownListForm" (ngSubmit)="onSubmit()">
+          <div class="form-wrap">
+              <div class="row">
+                  <div class="col-sm-2">
+                      <div class="form-group">  
+                          <span id="CP_spnGroupName">Organization</span>     
+                          <select formControlName="organizationName" [(ngModel)]="organizationNametitle" (change)="chngeOrgDropDown($event)" class="form-control orgselect" >
+                            <option [value]="0">Select</option>
+                            <option [value]="item.groupId" *ngFor="let item of OrganizationDropDownList"> {{item.groupName}}</option>
+                          </select>      
+                      </div>
+                  </div>
+                  <div class="col-sm-2">
+                      <div class="form-group">  
+                          <span id="CP_spnGroupName">Facility</span>     
+                          <select formControlName="facilityName" [(ngModel)]="facilityNametitle" class="form-control orgselect" >
+                            <option [value]="0">Select</option>
+                            <option [value]="item.collegeId" *ngFor="let item of FacilityDropDownList"> {{item.collegeName}}</option>
+                          </select>     
+                      </div>
+                  </div>
+                  <div class="col-sm-2">
+                      <div class="form-group institutefilter">  
+                          <button class="btn btn-primary">Apply Filter</button>     
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </form>
+      </div>
+  </div>
+    
+    <div class="row mt-3">
+      <div class="table-responsive">
+        <table class="table tablebg table-bordered table-instituteReport">
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>#of  Users</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+            *ngFor="let item of UserRolesList" >
+            <td>{{ item.roleName }}</td>        
+            <td>{{ item.userCount }}</td>
+            <td>
+              <a href="#" routerLink="/editrole/{{item.roleID}}" title="Edit" imageurl="#" class="instituteEdit">Edit</a>
+              <a href="#"  title="Delete Selected Role" class="instituteDelete">Delete</a>
+            </td>        
+          </tbody>
+        </table>
+      </div>
+    </div>
+  <!--form modal-->
+  </div>

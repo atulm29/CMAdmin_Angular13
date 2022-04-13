@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="Icon_Video_Off" transform="translate(-193 -119)">
+    <rect id="Rectangle_1503" data-name="Rectangle 1503" width="26" height="26" transform="translate(193 119)" fill="rgba(255,255,255,0)"/>
+    <g id="ic_MP4Video_MP3Audido_Articulate_2DAnimation_off" data-name="ic_MP4Video+MP3Audido_Articulate_2DAnimation_off" transform="translate(194 120)">
+      <path id="Path_1178" data-name="Path 1178" d="M45.025,35.578l-5.775-3.85a.74.74,0,0,0-1.15.625v7.7a.744.744,0,0,0,1.15.625l5.775-3.85A.747.747,0,0,0,45.025,35.578Z" transform="translate(-29.2 -24.328)" fill="#666"/>
+      <path id="ic_MP4Video_MP3Audido_Articulate_2DAnimation_off-2" data-name="ic_MP4Video+MP3Audido_Articulate_2DAnimation_off" d="M14.375,2.5A11.875,11.875,0,1,0,26.25,14.375,11.886,11.886,0,0,0,14.375,2.5Zm0,21.9A10.025,10.025,0,1,1,24.4,14.375,10.04,10.04,0,0,1,14.375,24.4Z" transform="translate(-2.5 -2.5)" fill="#666"/>
+    </g>
+  </g>
+</svg>

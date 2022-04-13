@@ -1,0 +1,96 @@
+
+<div class="content-wrapper">
+    <div class="d-flex align-items-center content-header" id="dvTopBar" >
+      <div class="content-header-title-wrap">
+          <h1 class="content-header-title">Admin Users/Add New Role</h1>
+      </div>  
+    </div>
+
+    <div class="box-body">
+        <form [formGroup]="AddNewRoleForm" (ngSubmit)="submitForm()" novalidate>
+            <div class="mb-4 Student1RegistrationPanel AddNewRolesec">
+                <div class="title_form">Add New Role</div> 
+                <div class="p-4">           
+                    <div class="row">
+                        <div class="col-sm-3" id="DvRoleOrganization" >
+                            <div class="form-group">
+                                <span ID="LblOrganization">Organization</span>
+                                <select formControlName="organizationName" [(ngModel)]="orgNameModel"  
+                                (change)="chngeOrgDropDown($event)" class="form-control orgselect" 
+                                [ngClass]="{'is-invalid': f['organizationName'].invalid && submitted}" required>
+                                    <option value="">Select</option>
+                                    <option [value]="item.groupId"  *ngFor="let item of OrganizationDropDownList"> {{item.groupName}}</option>
+                                 </select> 
+                                 <div class="invalid-feedback1" *ngIf="submitted && f['organizationName'].invalid">
+                                    Please select organization
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3" id="DvRoleInstitute">
+                            <div class="form-group">
+                                <span ID="LblbInstitute">Institute</span>
+                                <select formControlName="facilityName" [(ngModel)]="facilityNameRole" (change)="changeFacilityDropDown($event)"  class="form-control orgselect"
+                                [ngClass]="{'is-invalid': f['facilityName'].invalid && submitted}" >
+                                    <option value="">Select</option>
+                                    <option [value]="item.collegeId" *ngFor="let item of FacilityDropDownList"> {{item.collegeName}}</option>
+                                  </select>      
+                                  <div class="invalid-feedback1" *ngIf="submitted && f['facilityName'].invalid">
+                                    Please select institute
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3" id="dvRoleMaster">
+                            <div class="form-group">
+                                <span ID="lblRole">Role</span> <span class="mandatory">*</span>
+                                <input type="text" class="form-control" formControlName="roleName"
+                                name="roleName" [ngClass]="{ 'is-invalid': submitted && f['roleName'].errors }" />     
+                                <div *ngIf="submitted && f['roleName'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['roleName'].errors['required']">Please enter role name</div>                              
+                                </div>                                 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3" id="dvRoleMaster">
+                            <div class="form-group">
+                                <span ID="spnPermission">Permissions</span> 
+                                <div *ngFor="let data of PermissionData; let i=index">
+                                    <label>
+                                      <input type="checkbox" [value]="data.adminDashBoardId" (change)="onChange(data.adminDashBoardId,$event)" />
+                                      {{data.alias}}
+                                    </label>
+                                </div>                            
+                                <div class="invalid-feedback1" *ngIf="submitted && f['name'].errors?.['required']">
+                                    Please select permissions for role
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group dropHolder">
+                                <button class="btn btn-primary buttonNext" type="submit"> Register  </button>
+                                <button class="btn btnCancel" type="button" (click)="cancel()"> Cancel  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group" *ngIf="submitted && addRoleError">
+                                <div  class="alert alert-danger" role="alert" >
+                                  {{ errorMessage }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

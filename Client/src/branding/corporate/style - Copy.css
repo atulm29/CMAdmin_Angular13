@@ -1,0 +1,19 @@
+﻿.login-box .logo > img, .main-header .logo > img {
+    display:none;
+}
+.login-box .logo {
+    background-image:url("logo-out.png");
+    background-repeat:no-repeat;
+    background-position:center center;
+    height: 50px;
+}
+.main-header .logo {
+     background-image:url("logoReverse.png");
+    background-repeat:no-repeat;
+    background-position:left 15px center;
+    height: 46px;
+    width: 255px;
+}
+.main-header, .navbar-default {
+    background-color: #1c2859;
+}

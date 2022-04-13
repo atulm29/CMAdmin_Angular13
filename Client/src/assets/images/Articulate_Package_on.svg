@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.141" height="20" viewBox="0 0 25.141 20">
+  <g id="Articulate_Package_on" transform="translate(-68 -39)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="18.467" height="3.358" transform="translate(70.518 40.679)" fill="#fff"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="3.358" height="3.358" transform="translate(70.518 44.876)" fill="#fff"/>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="6.715" height="0.839" transform="translate(74.715 46.555)" fill="#fff"/>
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="3.358" height="3.358" transform="translate(70.518 49.073)" fill="#fff"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="5.876" height="0.839" transform="translate(74.715 50.752)" fill="#fff"/>
+    <path id="Articulate_Package" d="M26.395,6.406l-.042-.042a.406.406,0,0,0-.588,0l-.881.839V4.979a.842.842,0,0,0-.839-.839H2.219a.842.842,0,0,0-.839.839V20.089a.842.842,0,0,0,.839.839H12.292V23.3H9.774a.842.842,0,0,0-.839.839h8.394a.842.842,0,0,0-.839-.839H13.971V20.928H24.044a.842.842,0,0,0,.839-.839V8.631l1.511-1.637A.406.406,0,0,0,26.395,6.406Zm-2.35,12.843H2.219V4.979H24.044v2.98l-2.182,2.057H8.1v.839H20.938l-2.057,1.931a13.78,13.78,0,0,0-1.3,1.427H8.1v.839h8.856l-.462.588v.042a1.225,1.225,0,0,0-1.385.252c-.588.588-1.427,2.224-2.686,2.686,0,0,2.98.588,4.449-.881a1.4,1.4,0,0,0,.294-1.427l1.217-.923a3.671,3.671,0,0,0,.42-.336h3.568v-.839H19.721l.294-.294,4.029-4.365Z" transform="translate(66.62 34.86)" fill="#fff"/>
+  </g>
+</svg>

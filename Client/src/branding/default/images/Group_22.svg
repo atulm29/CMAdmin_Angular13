@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 521 258">
+  <defs>
+    <style>
+      .cls-1, .cls-8 {
+        fill: #339cac;
+      }
+
+      .cls-2 {
+        fill: #d1d4dd;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #333;
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-3 {
+        font-size: 12px;
+      }
+
+      .cls-4 {
+        font-size: 10px;
+      }
+
+      .cls-5 {
+        fill: #c14a43;
+      }
+
+      .cls-6 {
+        fill: #7f5f83;
+      }
+
+      .cls-7 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-8 {
+        stroke: #707070;
+      }
+
+      .cls-9 {
+        stroke: none;
+      }
+
+      .cls-10 {
+        fill: none;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-1" cx="62.5" cy="62.5" r="62.5" transform="translate(323 165)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_22" data-name="Group 22" transform="translate(-125 -117)">
+    <rect id="Rectangle_175" data-name="Rectangle 175" class="cls-2" width="521" height="258" transform="translate(125 117)"/>
+    <text id="_10_Institute_s_79_Student_s_19_Instructor_s_" data-name="10 Institute(s), 79 Student(s), 19 Instructor(s)" class="cls-3" transform="translate(386 142)"><tspan x="-116.332" y="0">10 Institute(s), 79 Student(s), 19 Instructor(s)</tspan></text>
+    <g id="Group_18" data-name="Group 18" transform="translate(6 18)">
+      <text id="Not_Started_0-50_76-100_" data-name="Not Started        0-50%        76-100%" class="cls-4" transform="translate(297 306)"><tspan x="0" y="0" xml:space="preserve">Not Started        0-50%        76-100%</tspan></text>
+      <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="4" cy="4" r="4" transform="translate(286 299)"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-5" cx="4" cy="4" r="4" transform="translate(368 299)"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" class="cls-6" cx="4" cy="4" r="4" transform="translate(422 299)"/>
+    </g>
+    <g id="Mask_Group_2" data-name="Mask Group 2" class="cls-7">
+      <g id="Rectangle_176" data-name="Rectangle 176" class="cls-8" transform="translate(311 152)">
+        <rect class="cls-9" width="144" height="142"/>
+        <rect class="cls-10" x="0.5" y="0.5" width="143" height="141"/>
+      </g>
+      <g id="Group_19" data-name="Group 19">
+        <path id="Path_12" data-name="Path 12" class="cls-6" d="M201.5,1561.5l49.833-50.5L263,1531.333l-3.112,4.134Z" transform="matrix(0.998, 0.07, -0.07, 0.998, 293.729, -1344.459)"/>
+        <path id="Path_11" data-name="Path 11" class="cls-5" d="M201.5,1561.5l49.833-50.5L263,1531.333l-3.112,4.134Z" transform="translate(184 -1334)"/>
+      </g>
+    </g>
+    <text id="Average_Course_Content_excluding_tests_Completion" data-name="Average Course Content (excluding tests) Completion" class="cls-3" transform="translate(386 350)"><tspan x="-141.671" y="0">Average Course Content (excluding tests) Completion</tspan></text>
+  </g>
+</svg>

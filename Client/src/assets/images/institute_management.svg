@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="48" viewBox="0 0 55 48">
+  <g id="institute_management" transform="translate(-0.5 -71.5)">
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="55" height="48" transform="translate(0.5 71.5)" fill="rgba(255,255,255,0)"/>
+    <path id="Path_1210" data-name="Path 1210" d="M23,24H1a1,1,0,0,1,0-2H23a1,1,0,0,1,0,2Zm-1-3H2a1,1,0,0,1,0-2H22a1,1,0,0,1,0,2ZM2,21a1,1,0,0,1-1-1V11a1,1,0,0,1,2,0v9A1,1,0,0,1,2,21Zm4,0a1,1,0,0,1-1-1V11a1,1,0,0,1,2,0v9A1,1,0,0,1,6,21Zm12,0a1,1,0,0,1-1-1V11a1,1,0,0,1,2,0v9A1,1,0,0,1,18,21Zm4,0a1,1,0,0,1-1-1V11a1,1,0,0,1,2,0v9A1,1,0,0,1,22,21ZM10,21a1,1,0,0,1-1-1V11a1,1,0,0,1,2,0v9A1,1,0,0,1,10,21Zm4,0a1,1,0,0,1-1-1V11a1,1,0,0,1,2,0v9A1,1,0,0,1,14,21ZM22.735,8H1.265A1.266,1.266,0,0,1,.687,5.609L11.2.194a1.747,1.747,0,0,1,1.6,0L23.313,5.61A1.265,1.265,0,0,1,22.735,8ZM4.3,6H19.7L12,2.032,4.3,6Zm7.362-4.917h0Z" transform="translate(16 84)" fill="#682875"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="1" cy="1" r="1" transform="translate(27 87)" fill="#212c5b"/>
+  </g>
+</svg>

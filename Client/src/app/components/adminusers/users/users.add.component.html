@@ -1,0 +1,143 @@
+<div class="content-wrapper">
+    <div class="d-flex align-items-center content-header" id="dvTopBar" >
+      <div class="content-header-title-wrap">
+          <h1 class="content-header-title">Admin Users / New Registration</h1>
+      </div>  
+    </div>
+
+    <div class="box-body">
+        <form [formGroup]="AddNewUserForm" (ngSubmit)="submitForm()" novalidate>
+            <div class="mb-4 professorLoginPanel">
+                <div class="title_form">Please enter details</div> 
+                <div class="p-4">           
+                    <div class="row">
+                        <div class="col-sm-3" id="DvRoleOrganization" >
+                            <div class="form-group">
+                                <span ID="LblOrganization">Organization</span>
+                                <select formControlName="organizationName" [(ngModel)]="orgNameModel"  
+                                (change)="chngeOrgDropDown($event)" class="form-control orgselect" 
+                                [ngClass]="{'is-invalid': f['organizationName'].invalid && submitted}" required>
+                                    <option value="">Select</option>
+                                    <option [value]="item.groupId"  *ngFor="let item of OrganizationDropDownList"> {{item.groupName}}</option>
+                                 </select> 
+                                 <div class="invalid-feedback1" *ngIf="submitted && f['organizationName'].invalid">
+                                    Please select organization
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3" id="DvRoleInstitute">
+                            <div class="form-group">
+                                <span ID="LblbInstitute">Facility</span>
+                                <select formControlName="facilityName" [(ngModel)]="facilityNameRole" (change)="changeFacilityDropDown($event)"  class="form-control orgselect"
+                                [ngClass]="{'is-invalid': f['facilityName'].invalid && submitted}" >
+                                    <option value="">Select</option>
+                                    <option [value]="item.collegeId" *ngFor="let item of FacilityDropDownList"> {{item.collegeName}}</option>
+                                  </select>      
+                                  <div class="invalid-feedback1" *ngIf="submitted && f['facilityName'].invalid">
+                                    Please select facility
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <span ID="lblRole">First Name </span> <span class="mandatory">*</span>
+                                <input type="text" class="form-control" formControlName="firstName" (input)="alphaNumberOnly($event)" (keypress)="alphaNumberOnly($event)" (paste)="onPaste($event)"
+                                name="firstName" [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }" />     
+                                <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['firstName'].errors['required']">Please enter first name</div>                              
+                                </div>                                 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <span ID="lblRole">Last Name </span> <span class="mandatory">*</span>
+                                <input type="text" class="form-control" formControlName="lastName"
+                                name="lastName" [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />     
+                                <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['lastName'].errors['required']">Please enter last name</div>                              
+                                </div>                                 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <span ID="lblRole">Login Name </span> <span class="mandatory">*</span>
+                                <input type="text" class="form-control" formControlName="loginName"
+                                name="loginName" [ngClass]="{ 'is-invalid': submitted && f['loginName'].errors }" />     
+                                <div *ngIf="submitted && f['loginName'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['loginName'].errors['required']">Please enter login name</div> 
+                                  <div *ngIf="f['loginName'].errors['pattern']">Email is invalid</div>                             
+                                </div>                                 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <span ID="lblRole">Password </span> <span class="mandatory">*</span>
+                                <input type="password" class="form-control" formControlName="password"
+                                name="password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />     
+                                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['password'].errors['required']">Please enter password</div>                              
+                                </div>                                 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <span ID="lblRole">Confirm Password </span> <span class="mandatory">*</span>
+                                <input type="password" class="form-control" formControlName="confirmPassword"
+                                name="confirmPassword" [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }" />     
+                                <div *ngIf="submitted && f['confirmPassword'].errors" class="invalid-feedback">
+                                  <div *ngIf="f['confirmPassword'].errors['required']">Please enter confirm password</div> 
+                                  <div *ngIf="f['confirmPassword'].errors['matching']">Confirm Password does not match </div>                             
+                                </div>                                 
+                            </div>
+                        </div>
+                    </div>           
+                    <div class="row mt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <span ID="LblbInstitute">Role</span>
+                                <select formControlName="userRoleName" [(ngModel)]="roleNameModel"  class="form-control orgselect"
+                                [ngClass]="{'is-invalid': f['userRoleName'].invalid && submitted}" >
+                                    <option value="">Select</option>
+                                    <option [value]="item.roleID" *ngFor="let item of UserRolesList"> {{item.roleName}}</option>
+                                  </select>      
+                                  <div class="invalid-feedback1" *ngIf="submitted && f['userRoleName'].invalid">
+                                    Please select role
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>          
+                    <div class="row mt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group dropHolder">
+                                <button class="btn btn-primary buttonNext" type="submit"> Register  </button>
+                                <button class="btn btnCancel" type="button" (click)="cancel()"> Cancel  </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-3">
+                            <div class="form-group" *ngIf="submitted && addRoleError">
+                                <div  class="alert alert-danger" role="alert" >
+                                  {{ errorMessage }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

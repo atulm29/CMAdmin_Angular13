@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 29" width="25" height="29">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M7 8L17 8L17 24L7 24L7 8Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #5877ff } 
+		.shp1 { opacity: 0.565;fill: #aeccd6 } 
+	</style>
+	<g id="aaa">
+		<g id="Group_1751">
+			<g id="Group_1750">
+				<path id="Path_967" class="shp0" d="M0 0L25 0L25 29L0 29L0 0Z" />
+			</g>
+		</g>
+		<g id="Clip-Path: Repeat_Grid_3" clip-path="url(#cp1)">
+			<g id="Repeat_Grid_3">
+				<g id="Layer">
+					<path id="Ellipse_1" class="shp1" d="M9 12C7.89 12 7 11.11 7 10C7 8.89 7.89 8 9 8C10.11 8 11 8.89 11 10C11 11.11 10.11 12 9 12Z" />
+				</g>
+				<g id="Layer">
+					<path id="Ellipse_1-2" class="shp1" d="M15 12C13.89 12 13 11.11 13 10C13 8.89 13.89 8 15 8C16.11 8 17 8.89 17 10C17 11.11 16.11 12 15 12Z" />
+				</g>
+				<g id="Layer">
+					<path id="Ellipse_1-3" class="shp1" d="M9 18C7.89 18 7 17.11 7 16C7 14.89 7.89 14 9 14C10.11 14 11 14.89 11 16C11 17.11 10.11 18 9 18Z" />
+				</g>
+				<g id="Layer">
+					<path id="Ellipse_1-4" class="shp1" d="M15 18C13.89 18 13 17.11 13 16C13 14.89 13.89 14 15 14C16.11 14 17 14.89 17 16C17 17.11 16.11 18 15 18Z" />
+				</g>
+				<g id="Layer">
+					<path id="Ellipse_1-5" class="shp1" d="M9 24C7.89 24 7 23.11 7 22C7 20.89 7.89 20 9 20C10.11 20 11 20.89 11 22C11 23.11 10.11 24 9 24Z" />
+				</g>
+				<g id="Layer">
+					<path id="Ellipse_1-6" class="shp1" d="M15 24C13.89 24 13 23.11 13 22C13 20.89 13.89 20 15 20C16.11 20 17 20.89 17 22C17 23.11 16.11 24 15 24Z" />
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

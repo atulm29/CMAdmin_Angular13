@@ -1,0 +1,66 @@
+<div class="container">
+  <h1>Facility page</h1>
+
+  <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <form [formGroup]="OrgDropDownListForm" (ngSubmit)="onSubmit()">
+          <select formControlName="name" [(ngModel)]="title">
+            <option [value]="0">All</option>
+            <option [value]="item.groupId" *ngFor="let item of OrganizationDropDownList"> {{item.groupName}}</option>
+          </select>
+          <button class="btn btn-danger">Submit</button>
+        </form>        
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="row">
+          <div class="col-4 p-0 text-end">
+            Page Size:
+            <select (change)="handlePageSizeChange($event)">
+              <option *ngFor="let size of pageSizes" [ngValue]="size">
+                {{ size }}
+              </option>
+            </select>
+          </div>
+          <div class="col-8 p-0 text-start">
+            <pagination-controls
+                  previousLabel="Prev"
+                   nextLabel="Next"
+                   [maxSize]="5"
+                  (pageChange)="handlePageChange($event)">
+              </pagination-controls> 
+              <span style="float: right;margin-right: 24px;">{{totalRecordsText}}</span> 
+              <div style="float: right;margin-right: 24px;">
+                <select (change)="onChange($event)" [(ngModel)]="selectedPageAccess">
+                  <option  *ngFor="let item of pagingAccessList">
+                    {{ item.value }}
+                  </option>
+                </select>
+              </div> 
+          </div>
+        </div> 
+      </div>  
+  </div>
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th  *ngFor="let hdr of TableHeaderData">{{ hdr.value }}</th>          
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of TableRowData | paginate : {
+                      itemsPerPage: pageSize,
+                      currentPage: page,
+                      totalItems: count
+                    }; let i = index" >         
+                    <td *ngFor="let objKey of TableHeaderData; let j = index">
+                      <div *ngHide="objKey.key == item.key">{{ item.value}} </div>  
+                    </td>                      
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

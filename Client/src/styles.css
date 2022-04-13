@@ -1,0 +1,817 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+/*@import "variables.css";*/
+@import url(branding/default/css/variables.css);
+
+@import url(branding/default/bootstrap/css/style.css);
+@import url(branding/default/css/style.css);
+/* =============== Primary Style =============== */
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    height: 100%
+}
+
+body {
+    font-family: var(--ff-primary), sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    color: var(--body-text-color);
+    background-color: var(--body-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+a {
+    display: inline-block;
+    color: var(--anchor-clr);
+    text-decoration: none;
+}
+
+    a:focus,
+    a:hover {
+        display: inline-block;
+        color: var(--anchor-clr-hover);
+        text-decoration: none;
+    }
+
+button {
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+img,
+video,
+svg {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+input,
+textarea {
+    font-family: var(--ff-primary);
+    font-size: 1rem;
+}
+
+    input::-ms-clear,
+    textarea::-ms-clear {
+        display: none;
+    }
+
+    input[type="password"] {
+        letter-spacing: .5em;
+    }
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        font-family: var(--ff-primary);
+        font-size: 1rem;
+        border: none;
+        -webkit-text-fill-color: var(--body-text-color);
+        -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+.form-group > span {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+/* =============== Global Style =============== */
+.no-scroll {
+    overflow: hidden;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 4px !important;
+    font-size: 14px;
+    background: url('assets/images/selection_big_arrow.svg') no-repeat right top #fff;
+    background-size: 25px 100%;
+    padding: 0px 25px 1px 9px !important;
+    cursor: pointer;
+    height: 31px;
+}
+
+.btn-container .btn + .btn {
+    margin-left: 10px;
+}
+
+/* =============== Icon Style =============== */
+.icon-block {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    line-height: 1;
+    flex-shrink: 0;
+    max-width: initial;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+
+
+
+
+
+/* =============== Layout style =============== */
+
+.layout-wrapper {
+    height: 100%;
+}
+
+    .layout-wrapper .leftnav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0px;
+        background-color: var(--leftpanel-bg);
+        width: var(--leftpanel-width);
+        overflow: auto;
+        z-index: 10;
+    }
+
+    .layout-wrapper .wrapper {
+        height: 100%;
+        margin-left: var(--leftpanel-width);
+    }
+
+    /* --------------- Sidebar style --------------- */
+
+    .layout-wrapper .leftnav.leftnavhover {
+        width: var(--leftpanel-open-width);
+        transition: width .3s ease;
+        box-shadow: 0 0 50px rgba(0,0,0,0.3)
+    }
+
+.homeclass .leftnav {
+    position: fixed;
+    height: 100%;
+}
+
+.layout-wrapper .leftnav::-webkit-scrollbar {
+    width: 0px;
+}
+
+.leftnav .logo {
+    text-align: center;
+    height: 60px;
+}
+
+    .leftnav .logo a {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+        .leftnav .logo a:hover {
+            background: none;
+        }
+
+.leftnavhover .large_logo {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.logo .small_logo {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.logo .large_logo {
+    display: none;
+}
+
+.logo img {
+    max-width: 65%;
+    max-height: 65%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.leftnavhover .logo .small_logo {
+    display: none;
+}
+
+.leftnavhover .logo .large_logo {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.leftnav .nav > a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    background-color: var(--leftpanel-anchorcolor);
+    margin-bottom: 1px;
+}
+
+.leftnavhover .nav > a:hover {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+.leftnav .nav .nav-link {
+    flex: 0 0 auto;
+    width: 55px;
+    height: 48px;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.leftnav .LeftNavText {
+    display: none;
+    flex: 1 0 0%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.leftnavhover .LeftNavText {
+    display: block;
+    color: var(--leftpanel-linkcolor);
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.leftnavhover .nav > a:hover .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+
+/* organization nav */
+.leftnav .nav > a .nav-link.Organizanav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-organization.svg');
+}
+
+.leftnav .nav > a.Organizanavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Organizanav,
+    .leftnav .nav > a.Organizanavactive .nav-link.Organizanav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-organization-selected.svg');
+    }
+
+.leftnavhover .nav > a.Organizanavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* organization nav End */
+
+/* Institue nav */
+.leftnav .nav > a .nav-link.Institutenav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-instituteManagement.svg');
+}
+
+.leftnav .nav > a.Institutenavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Institutenav,
+    .leftnav .nav > a.Institutenavactive .nav-link.Institutenav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-instituteManagement-selected.svg');
+    }
+
+.leftnavhover .nav > a.Institutenavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Institue nav End */
+
+/* Admin user nav */
+.leftnav .nav > a .nav-link.Instructnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-instructor.svg');
+}
+
+.leftnav .nav > a.Instructnavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Instructnav,
+    .leftnav .nav > a.Instructnavactive .nav-link.Instructnav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-instructor-selected.svg');
+    }
+
+.leftnavhover .nav > a.Instructnavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Admin user nav End */
+
+/* Course nav */
+.leftnav .nav > a .nav-link.Coursenav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-courses.svg');
+}
+
+.leftnav .nav > a.Coursenavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Coursenav,
+    .leftnav .nav > a.Coursenavactive .nav-link.Coursenav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-courses-seleted.svg');
+    }
+
+.leftnavhover .nav > a.Instructnavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Course nav End */
+
+/* Student Management nav */
+.leftnav .nav > a .nav-link.Studentnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-student.svg');
+}
+
+.leftnav .nav > a.Studentnavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Studentnav,
+    .leftnav .nav > a.Studentnavactive .nav-link.Studentnav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-student-selected.svg');
+    }
+
+.leftnavhover .nav > a.Studentnavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Student Management nav End */
+
+/* Reports nav */
+.leftnav .nav > a .nav-link.Reportsnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-reports.svg');
+}
+
+.leftnav .nav > a.Reportsnavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Reportsnav,
+    .leftnav .nav > a.Reportsnavactive .nav-link.Reportsnav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-reports-selected.svg');
+    }
+
+.leftnavhover .nav > a.Reportsnavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Reports nav End */
+
+/* setting nav */
+.leftnav .nav > a .nav-link.Settingsnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-settings.svg');
+}
+
+.leftnav .nav > a.SettingsnavActive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Settingsnav,
+    .leftnav .nav > a.SettingsnavActive .nav-link.Settingsnav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-settings-seletced.svg');
+    }
+
+.leftnavhover .nav > a.SettingsnavActive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* setting nav End */
+
+/* Survey Forms nav */
+.leftnav .nav > a .nav-link.surveyformsnav {
+    background-image: url('assets/images/siderbar-icon/icon-surveyForms-nav.svg');
+}
+
+.leftnav .nav > a.surveyformsnavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.surveyformsnav,
+    .leftnav .nav > a.surveyformsnavactive .nav-link.surveyformsnav {
+        background-image: url('assets/images/siderbar-icon/icon-surveyForms-nav-selected.svg');
+    }
+
+.leftnavhover .nav > a.surveyformsnavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Survey Forms nav End */
+
+/* Question Bank nav */
+.leftnav .nav > a .nav-link.Qbanknav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-question-bank.svg');
+}
+
+.leftnav .nav > a.Qbanknavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Qbanknav,
+    .leftnav .nav > a.Qbanknavactive .nav-link.Qbanknav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-question-bank-selected.svg');
+    }
+
+.leftnavhover .nav > a.Qbanknavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Question Bank nav End */
+
+/* Question Authoring Workflow nav */
+.leftnav .nav > a .nav-link.QBankWorkflownav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-quitionbank-workflow.svg');
+}
+
+.leftnav .nav > a.QBankWorkflownavActive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.QBankWorkflownav,
+    .leftnav .nav > a.QBankWorkflownavActive .nav-link.QBankWorkflownav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-quitionbank-workflow-selected.svg');
+    }
+
+.leftnavhover .nav > a.QBankWorkflownavActive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Question Authoring Workflow nav End */
+
+/* Asset Management nav */
+.leftnav .nav > a .nav-link.Assetmanagementnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-assetManagement.svg');
+}
+
+.leftnav .nav > a.Assetmanagementnavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Assetmanagementnav,
+    .leftnav .nav > a.Assetmanagementnavactive .nav-link.Assetmanagementnav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-assetManagement-selected.svg');
+    }
+
+.leftnavhover .nav > a.Assetmanagementnavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Asset Management nav End */
+
+/* Asset Authoring Workflow nav */
+.leftnav .nav > a .nav-link.AssetAuthoringWorkflownav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-assetAuthoringWorkflow.svg');
+}
+
+.leftnav .nav > a.AssetAuthoringWorkflowactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.AssetAuthoringWorkflownav,
+    .leftnav .nav > a.AssetAuthoringWorkflowactive .nav-link.AssetAuthoringWorkflownav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-assetAuthoringWorkflow-selected.svg');
+    }
+
+.leftnavhover .nav > a.AssetAuthoringWorkflowactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Asset Authoring Workflow nav End */
+
+/*Certification Management nav */
+.leftnav .nav > a .nav-link.Certificationnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-certification.svg');
+}
+
+.leftnav .nav > a.Certificationnavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Certificationnav,
+    .leftnav .nav > a.Certificationnavactive .nav-link.Certificationnav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-certification-selected.svg');
+    }
+
+.leftnavhover .nav > a.Certificationnavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Certification Management nav End */
+
+/* Exception Services nav */
+.leftnav .nav > a .nav-link.servicesnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-services.svg');
+}
+
+.leftnav .nav > a.servicesnavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.servicesnav,
+    .leftnav .nav > a.servicesnavactive .nav-link.servicesnav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-services-selected.svg');
+    }
+
+.leftnavhover .nav > a.servicesnavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Exception Services nav End */
+
+/* Report Builder nav */
+.leftnav .nav > a .nav-link.ReportBuildernav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-report-builder.svg');
+}
+
+.leftnav .nav > a.ReportBuilderActive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.ReportBuildernav,
+    .leftnav .nav > a.ReportBuilderActive .nav-link.ReportBuildernav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-report-builder-selected.svg');
+    }
+
+.leftnavhover .nav > a.ReportBuilderActive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Report Builder nav End */
+
+/* Score Card nav */
+.leftnav .nav > a .nav-link.switchtoscorecardnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-reports.svg');
+}
+
+.leftnav .nav > a.switchtoscorecardnavActive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.switchtoscorecardnav,
+    .leftnav .nav > a.switchtoscorecardnavActive .nav-link.switchtoscorecardnav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-reports-selected.svg');
+    }
+
+.leftnavhover .nav > a.switchtoscorecardnavActive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Score Card nav End */
+
+/* Inherit Utility nav */
+.leftnav .nav > a .nav-link.InheritUtilitynav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-inheritUtility.svg');
+}
+
+.leftnav .nav > a.InheritUtilityActive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.InheritUtilitynav,
+    .leftnav .nav > a.InheritUtilityActive .nav-link.InheritUtilitynav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-inheritUtility-selected.svg');
+    }
+
+.leftnavhover .nav > a.InheritUtilityActive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Inherit Utility nav End */
+
+/* License & Course Meta Master nav */
+.leftnav .nav > a .nav-link.licenseCourseMetaMasterNav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-LicenseCourseMetaMaster.svg');
+}
+
+.leftnav .nav > a.licenseCourseMetaMasterNavActive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.licenseCourseMetaMasterNav,
+    .leftnav .nav > a.licenseCourseMetaMasterNavActive .nav-link.licenseCourseMetaMasterNav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-LicenseCourseMetaMaster-selected.svg');
+    }
+
+.leftnavhover .nav > a.licenseCourseMetaMasterNavActive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* License & Course Meta Master nav End */
+
+/* License & Course Meta Master nav */
+.leftnav .nav > a .nav-link.collegebatchnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-user-group.svg');
+}
+
+.leftnav .nav > a.collegebatchnavactive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.collegebatchnav,
+    .leftnav .nav > a.collegebatchnavactive .nav-link.collegebatchnav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-user-group-selected.svg');
+    }
+
+.leftnavhover .nav > a.collegebatchnavactive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* License & Course Meta Master nav End */
+
+/* Events nav */
+.leftnav .nav > a .nav-link.Eventnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-events.svg');
+}
+
+.leftnav .nav > a.EventnavActive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Eventnav,
+    .leftnav .nav > a.EventnavActive .nav-link.Eventnav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-events-selected.svg');
+    }
+
+.leftnavhover .nav > a.EventnavActive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Events nav End */
+
+/* Community nav */
+.leftnav .nav > a .nav-link.Communitynav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-community.svg');
+}
+
+.leftnav .nav > a.CommunitynavActive {
+    background-color: var(--leftpanel-anchorcolor-hover);
+}
+
+    .leftnav .nav > a:hover .nav-link.Communitynav,
+    .leftnav .nav > a.CommunitynavActive .nav-link.Communitynav {
+        background-image: url('assets/images/siderbar-icon/icon-nav-community-seletced.svg');
+    }
+
+.leftnavhover .nav > a.CommunitynavActive .LeftNavText {
+    color: var(--leftpanel-linkcolor-hover);
+}
+/* Community nav End */
+
+/* Logout nav */
+.leftnav .nav > a .nav-link.Logoutnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-logout.svg');
+}
+
+.leftnav .nav > a:hover .nav-link.Logoutnav {
+    background-image: url('assets/images/siderbar-icon/icon-nav-logout-selected.svg');
+}
+/* Logout nav End */
+
+
+/* --------------- Sidebar style End --------------- */
+/* --------------- Content Warpper style  --------------- */
+/* Content Header Style */
+.page-header {
+    padding: 20px 30px;
+}
+
+    .page-header .page-header-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--page-title-clr);
+        margin: 0;
+        padding: 0;
+    }
+
+    .page-header .icon-logout {
+        display: block;
+        font-size: 0px;
+        color: transparent;
+        width: 24px;
+        height: 24px;
+        background-image: url('assets/images/common-icons/icon-page-header-logout.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+
+/* Content Header Style End */
+
+.content-wrapper {
+    padding: 0 30px;
+}
+
+    .content-wrapper .content-header {
+        padding: 20px 0;
+    }
+
+.content-header .content-header-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--page-title-clr);
+    margin: 0;
+    padding: 0;
+}
+
+.content-header .breadcrumb {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    flex-wrap: nowrap;
+}
+
+    .content-header .breadcrumb > li {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--breadcrumb-clr);
+        line-height: normal;
+    }
+
+.breadcrumb > li + li:before {
+    content: '/';
+    margin-left: 10px;
+}
+
+.content-header .breadcrumb > li.active {
+    color: var(--breadcrumb-active-clr);
+}
+
+    .content-header .breadcrumb > li.active:before {
+        color: var(--breadcrumb-clr);
+    }
+
+/* --------------- Content Warpper style End --------------- */
+/* =============== Layout style End =============== */
+
+.ngx-pagination {
+    margin-left: 0 !important;
+    margin-bottom: 1rem;
+    padding-left: 0px !important;
+}
+.form-group > span {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.table>:not(:first-child) {
+    border-top: none;
+}
+
+.mt-19px { margin-top: 19px !important;}
+
+.btn-close {
+    width: 11px !important;
+    height: 11px !important;
+    background: url("assets/images/close_icon-white.svg") no-repeat;
+    z-index: 10;
+    float: right;
+    position: absolute;
+    right: 14px;
+    top: 4px;
+    background-color: transparent;
+    border: 1px solid #e1e1e1;
+    background-position: center center;
+    border-radius: 3px;
+    border: none;
+    font-size: 0px;
+}

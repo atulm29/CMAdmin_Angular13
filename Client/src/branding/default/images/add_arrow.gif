@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.505 16.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0b7ba1;
+      }
+    </style>
+  </defs>
+  <g id="Assignment" transform="translate(-1104 -388)">
+    <path id="ic_exit_to_app_24px" class="cls-1" d="M9.5,14.541l1.292,1.293,4.583-4.583L10.792,6.667,9.5,7.959l2.365,2.374H3v1.833h8.864ZM18.667,3H3.833A.8.8,0,0,0,3,3.833V8.5h.833V3.833H18.667V18.667H3.833V14H3v4.667c.042.119-.184.833.833.833H18.667a.787.787,0,0,0,.833-.833V3.833C19.484,3.851,19.675,3,18.667,3Z" transform="translate(1101 385)"/>
+  </g>
+</svg>

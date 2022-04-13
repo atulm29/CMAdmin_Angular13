@@ -1,0 +1,57 @@
+
+ <div class="layout-wrapper" id="mainsec">
+  <div  [ngClass]="leftnav" (mouseover)="changeStyle($event)" (mouseout)="changeStyle($event)">
+    <div class="logo">
+        <a href="SuperAdminDashboard.aspx" alt="Dashboard" title="Dashboard">
+            <span class="small_logo">
+                <img id="ancLogoNewSmall" runat="server" src="../../../assets/images/logosmall.png" alt="" /></span>
+            <span class="large_logo">
+                <img id="ancLogoNew" runat="server" src="../../../assets/images/logo.png" alt="" /></span>
+        </a>
+    </div>
+   <nav id="LeftnavBar" class="nav">
+     <a id="GroupManagement" href="CollegeGroupManagement.aspx" alt="Organizations" title="Organizations">
+      <span class="nav-link pt-3  pb-3 Organizanav text-center"></span> 
+      <span class="LeftNavText">Organizations</span>
+    </a>
+    <a id="InstituteManagement" href="CollegeList.aspx" alt="Facilities" title="Facilities">
+      <span class="nav-link pt-3 pb-3 text-center Institutenav"></span> 
+      <span class="LeftNavText">Facilities</span>
+    </a>
+    <a id="InstructorManagement" href="InstituteTrainerManagement.aspx" alt="Admin Users" title="Admin Users">
+      <span class="nav-link pt-3 pb-3 text-center Instructnav"></span> 
+      <span class="LeftNavText">Admin Users</span>
+    </a>
+    <a id="CourseManagement" href="ResearchReportDashboard.aspx" alt="Research Reports" title="Research Reports">
+      <span class="nav-link pt-3 pb-3 text-center Coursenav"></span> 
+      <span class="LeftNavText">Research Reports</span>
+    </a>
+    <a id="StudentManagement" href="StudentList.aspx" alt="Members" title="Members">
+      <span class="nav-link pt-3 pb-3 text-center Studentnav"></span> 
+      <span class="LeftNavText">Members</span>
+    </a>
+    <a id="SwitchToScoreCard" href="Scorecard.aspx" alt="Scorecard" title="Scorecard">
+      <span class="nav-link pt-3 pb-3 text-center switchtoscorecardnav"></span>
+       <span class="LeftNavText">Scorecard</span>
+    </a>
+    <a id="LicenseCourseMetaMaster" href="Audience.aspx" alt="License &amp; Course Meta Master" title="License &amp; Course Meta Master">
+      <span class="nav-link pt-3 pb-3 text-center licenseCourseMetaMasterNav"></span>
+       <span class="LeftNavText">License &amp; Course Meta Master</span>
+    </a>
+    <a id="Events" href="EventList.aspx" alt="Events" title="Events">
+      <span class="nav-link pt-3 pb-3 text-center Eventnav"></span>
+      <span class="LeftNavText">Events</span>
+    </a>
+    <a id="Community" href="CommunityForum.aspx" alt="Community" title="Community">
+      <span class="nav-link pt-3 pb-3 text-center Communitynav"></span>
+      <span class="LeftNavText">Community</span>
+    </a>
+    <a href="#." class="BottomLogout" alt="Logout" title="Logout" onclick="logout();">
+      <span class="nav-link pt-3 pb-3 text-center Logoutnav"></span>
+       <span class="LeftNavText">Logout</span>
+    </a>
+    </nav>
+
+  </div>
+  <div class="wrapper"></div>
+ </div>

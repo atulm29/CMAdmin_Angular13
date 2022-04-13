@@ -1,0 +1,34 @@
+
+<div class="content-wrapper">
+    <div class="row">
+      <div class="admin-dashboard" id="adminDashboardID">
+        <div id="dvShowHide">
+            <div class="row">
+                <div class="col">
+                  <div class="admin-card-wrapper">
+                    <ng-container  *ngFor="let oadminTile of adminTiles" >
+                      <a *ngIf="oadminTile.type == 'Count'" style="cursor: pointer;"  href="{{oadminTile.url}}" class="admin-card user-info-box {{oadminTile.cssClass}}">
+                            <h4 class="card-title-top">{{oadminTile.alias}}</h4>
+                            <span class="card-count">{{oadminTile.dashboardCount}}</span>
+                      </a>
+                    </ng-container>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="admin-card-wrapper adminsectionright">           
+                        <ng-container  *ngFor="let oadminTile of adminTiles" >
+                          <div *ngIf="oadminTile.type == 'Tile'" >
+                            <a  href="{{oadminTile.url}}"    target="{{oadminTile.alias == 'HRMS' && '_blank' || '_self' }}" class="admin-card link-card level-1 {{oadminTile.cssClass}}">
+                              <span class="icon"></span>
+                              <h4 class="card-title">{{oadminTile.alias}}</h4>
+                            </a>
+                          </div>
+                      </ng-container>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

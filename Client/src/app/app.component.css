@@ -1,0 +1,71 @@
+.fa-bars {
+    cursor: pointer;
+}
+
+.nav-item .nav-link {
+    cursor: pointer;
+}
+.nav-item button.nav-link {
+
+        outline: none;
+        border: none;
+        background-color: transparent;
+    
+}
+
+.page-header {
+    padding: 20px 30px;
+}
+
+    .page-header .page-header-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--page-title-clr);
+        margin: 0;
+        padding: 0;
+    }
+
+   .icon-logout {
+        display: block;
+        font-size: 0px;
+        color: transparent;
+        width: 24px;
+        height: 24px;
+        background-image: url('/assets/images/common-icons/icon-page-header-logout.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+
+    .sidebar-nav ul li a {
+        font-size: 26px;
+        text-decoration: none;
+        display: block;
+        padding: 6px 10px;
+        transition: 0.5s;
+    }
+    .sidebar-nav ul li a:hover {
+        background-color: #eeeeee;
+        border-radius: 4px;
+    }
+    .sidebar-nav .offcanvas {
+        width: 220px;
+        border: none;
+    }
+    .sidebar-nav .offcanvas ul li a span {
+        font-size: 18px;
+        position: relative;
+        top: -4px;
+        transition: 0.5s;
+    }
+    .sidebar-nav .offcanvas.show ul li a:hover span {
+        padding-left: 10px;
+    }
+    .sidebar-nav .dropdown-toggle::after {
+        position: relative;
+        top: 3px;
+    }
+    .bi::before, [class^="bi-"]::before, [class*=" bi-"]::before
+    {
+        margin-right: 5px;
+    }

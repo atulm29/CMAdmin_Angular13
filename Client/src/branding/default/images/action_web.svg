@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.5 16.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c93232;
+      }
+    </style>
+  </defs>
+  <g id="action_web" transform="translate(2 -2)">
+    <path id="ic_exit_to_app_24px" class="cls-1" d="M17.667,3H11.833A1.833,1.833,0,0,0,10,4.833V8.5h1.833V4.833h5.833V17.667H11.833V14H10v3.667A1.833,1.833,0,0,0,11.833,19.5h5.833A1.839,1.839,0,0,0,19.5,17.667V4.833A1.839,1.839,0,0,0,17.667,3Z" transform="translate(17.5 21.5) rotate(180)"/>
+    <path id="ic_exit_to_app_24px-2" data-name="ic_exit_to_app_24px" class="cls-1" d="M9.5,14.541l1.292,1.293,4.583-4.583L10.792,6.667,9.5,7.959l2.365,2.374H3v1.833h8.864Z" transform="translate(-0.875 -1)"/>
+  </g>
+</svg>
