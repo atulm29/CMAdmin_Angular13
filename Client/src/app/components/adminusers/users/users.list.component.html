@@ -82,10 +82,13 @@
               <td>{{item.loginName}}</td>
               <td>{{item.roleName}}</td>
               <td>
-                <a href="#" title="Edit" imageurl="#" class="instituteEdit">Edit</a>
+                <a href="#" title="Edit" routerLink="/adminedituser/{{item.adminUserId}}" imageurl="#" class="instituteEdit">Edit</a>
                 <a href="#" title="Delete Selected Institute User" class="instituteDelete">Delete</a>
               </td>
             </tr>
+            <tr *ngIf="UserList">
+              <td *ngIf="UserList.length === 0" colspan="6">No Records Found</td>
+            </tr> 
           </tbody>
         </table>
       </div>

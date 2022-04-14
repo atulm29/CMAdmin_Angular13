@@ -21,6 +21,7 @@ namespace CMAdmin.API.Repositories
         DataTable GetCollegeSubscriptionsList(string CollegeId = "", string GroupId = "", int PageIndex = 0, int PageSize = 10, string FromDate = "", string ToDate = "", bool ShowIsDefault = false, string AdminUserType = "", string AdminUserId = "");
         DataTable GetCollegeListConfigurationForCollege(string CollegeId = "0");
         Task<List<InstituteRole>> GetDistinctCollegeListByAddressCity(string Address, string City, string GroupId = "", string CollegeId = "");
+        DataTable GetAllColleges(string CollegeID, string GroupId = "");
     }
     public class CollegeMasterRepository : ICollegeMasterRepository
     {
@@ -167,5 +168,41 @@ namespace CMAdmin.API.Repositories
                 return null;
             }
         }
+
+        public DataTable GetAllColleges(string CollegeID, string GroupId = "")
+        {
+            DBAccess oDBAccess = null;
+            DataTable oDataTable = new DataTable();
+            try
+            {
+                oDBAccess = new DBAccess();
+                bool isGroup = false;
+                string Selectstr = "SELECT *,CONVERT(VARCHAR(12),StartDate,103) Start ,CONVERT(VARCHAR(12),ExpiryDate,103) Expiry "
+                                    + " ,CONVERT(VARCHAR(12),CreatedDate,103) CreatedDateShow "
+                                    + " ,ISNULL((SELECT GroupName FROM MCQ_GroupMaster WHERE GroupId=MCQ_CollegeMaster.GroupId),'') GroupName "
+                                    + " From  MCQ_CollegeMaster WHERE 1=1 ";
+                if (!string.IsNullOrEmpty(GroupId) && GroupId != "0")
+                {
+                    isGroup = true;
+                    Selectstr += " AND GroupId=" + GroupId;
+                }
+                if (Convert.ToUInt32(CollegeID) > 0 && !isGroup)
+                {
+                    Selectstr += " AND CollegeId=" + CollegeID;
+                }
+                oDataTable = oDBAccess.lfnGetDataTable(Selectstr);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogException(ex);
+                // LogWriter.WriteLog("GetAllColleges()->Error->" + ex.Message + Environment.NewLine + ex.StackTrace);
+            }
+            finally
+            {
+                if (oDBAccess != null && oDBAccess.isConnectionOpen()) oDBAccess.CloseDB();
+            }
+            return oDataTable;
+        }
+
     }
 }

@@ -15,6 +15,7 @@ import { DashBoardLayoutMiddleComponent } from './layout/dashboard-layout/dashbo
 import { UserAddNewRoleComponent } from './components/adminusers/roles/role.add.component';
 import { UserEditRoleComponent } from './components/adminusers/roles/role.edit.component';
 import { AddAdminUsersComponent } from './components/adminusers/users/users.add.component';
+import { EditAdminUsersComponent } from './components/adminusers/users/users.edit.component';
 //import { AuthGuard } from './shared/auth.guard';
 
 
@@ -37,6 +38,7 @@ const routes: Routes = [
       { path: 'facilities', component: Facilities, canActivate: [AuthGuard]  }, 
       { path: 'adminusers', component: UsersComponent, canActivate: [AuthGuard] },
       { path: 'adminadduser', component: AddAdminUsersComponent, canActivate: [AuthGuard] },
+      { path: 'adminedituser/:id', component: EditAdminUsersComponent, canActivate: [AuthGuard] },
       { path: 'adminroles', component: UserRoleListComponent, canActivate: [AuthGuard] },
       { path: 'addnewrole', component: UserAddNewRoleComponent, canActivate: [AuthGuard] },
       { path: 'editrole/:id', component: UserEditRoleComponent, canActivate: [AuthGuard] },

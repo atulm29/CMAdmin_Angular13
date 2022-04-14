@@ -30,6 +30,7 @@ import { UserRoleListComponent } from './components/adminusers/roles/role.list.c
 import { UserAddNewRoleComponent } from './components/adminusers/roles/role.add.component';
 import { UserEditRoleComponent } from './components/adminusers/roles/role.edit.component';
 import { AddAdminUsersComponent } from './components/adminusers/users/users.add.component';
+import { EditAdminUsersComponent } from './components/adminusers/users/users.edit.component';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { AddAdminUsersComponent } from './components/adminusers/users/users.add.
     MembersComponent,  
     UsersComponent,
     AddAdminUsersComponent,
+    EditAdminUsersComponent,
     UserImportsComponent    
   ],
   imports: [

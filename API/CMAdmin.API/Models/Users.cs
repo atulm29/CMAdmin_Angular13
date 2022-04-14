@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CMAdmin.API.Models
 {
-    public class AdminUserMaster
+    public class Users
     {
         public int AdminUserId { get; set; }
         public string LoginName { get; set; }
@@ -15,6 +15,9 @@ namespace CMAdmin.API.Models
         public string CollegeId { get; set; }
         public string UserType { get; set; }
         public string RoleId { get; set; }
+        public string DepartmentName { get; set; }
+        public string DeptSectionName { get; set; }
+        public string RoleName { get; set; }
+        public string GroupId { get; set; }
     }
-
 }

@@ -1427,11 +1427,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GIT_REPO\\CMAdmin\\API\\CMAdmin.API\\CMAdmin.API.csproj",
+      "projectUniqueName": "D:\\GIT_REPO\\CMAdmin_Angular13\\API\\CMAdmin.API\\CMAdmin.API.csproj",
       "projectName": "CMAdmin.API",
-      "projectPath": "D:\\GIT_REPO\\CMAdmin\\API\\CMAdmin.API\\CMAdmin.API.csproj",
+      "projectPath": "D:\\GIT_REPO\\CMAdmin_Angular13\\API\\CMAdmin.API\\CMAdmin.API.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\GIT_REPO\\CMAdmin\\API\\CMAdmin.API\\obj\\",
+      "outputPath": "D:\\GIT_REPO\\CMAdmin_Angular13\\API\\CMAdmin.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

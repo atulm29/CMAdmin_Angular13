@@ -69,7 +69,7 @@
               <th>Action</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody>            
             <tr
             *ngFor="let item of UserRolesList" >
             <td>{{ item.roleName }}</td>        
@@ -77,7 +77,11 @@
             <td>
               <a href="#" routerLink="/editrole/{{item.roleID}}" title="Edit" imageurl="#" class="instituteEdit">Edit</a>
               <a href="#"  title="Delete Selected Role" class="instituteDelete">Delete</a>
-            </td>        
+            </td> 
+            </tr>    
+            <tr *ngIf="UserRolesList">
+              <td *ngIf="UserRolesList.length === 0" colspan="3">No Records Found</td>
+            </tr>   
           </tbody>
         </table>
       </div>

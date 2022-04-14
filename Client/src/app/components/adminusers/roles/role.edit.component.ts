@@ -20,7 +20,7 @@ export class UserEditRoleComponent implements OnInit
 {
    constructor( public authService: AuthService, public organizationService: OrganizationService, 
         public userRoleService: UserRolesService, public facilityService: FacilitiesService,
-        public fb: FormBuilder, private router: Router, private activatedRoute: ActivatedRoute,) { }
+        public fb: FormBuilder, private router: Router, private activatedRoute: ActivatedRoute) { }
     orgNameModel = "";
     facilityNameRole ="";
     submitted = false;
@@ -41,10 +41,10 @@ export class UserEditRoleComponent implements OnInit
     get f(): { [key: string]: AbstractControl } {return this.editRoleForm.controls; }
     ngOnInit(): void 
     { 
-        this.getOrganizationDropDownListData();       
-        this.getFacilityDropDownListData(); 
+      this.getEditRoleData();
+
         //this.getPermissionCheckBoxList();       
-        this.getEditRoleData();
+        
     }
 
     onChange(name: number, e: any) {
@@ -74,6 +74,10 @@ export class UserEditRoleComponent implements OnInit
                   });
                   this.PermissionData = data.result.permissions;
                   this.editRoleForm.controls['name'].patchValue(data.result.permissions);
+                  this.groupId = data.result.groupId;
+                  this.collegeId = data.result.collegeId;
+                  this.getOrganizationDropDownListData();       
+                  this.getFacilityDropDownListData(); 
               }
               else if (data.status == -1 || data.status == -2)
               {
@@ -110,6 +114,7 @@ export class UserEditRoleComponent implements OnInit
     getFacilityDropDownListData(): void 
     {
       let paramValue = {groupId: this.groupId, collegeId: this.collegeId};
+      console.log("Facility Param: " + JSON.stringify(paramValue));
       this.facilityService.getFacilityDropDownData(paramValue)
         .subscribe({ next: (data) => {        
             this.FacilityDropDownList = data.result;          

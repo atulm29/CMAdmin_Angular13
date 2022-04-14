@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { AuthService } from "src/app/core";
 import { OrganizationDropDownData } from "src/app/models/Organization";
 import { permission } from "src/app/models/permission";
@@ -14,12 +14,12 @@ import Validation from "src/app/shared/validation";
 
 
 @Component({
-    selector: 'app-admin-addadminusers',
-    templateUrl: './users.add.component.html',
-    styleUrls: ['./users.add.component.css']
+    selector: 'app-admin-editadminusers',
+    templateUrl: './users.edit.component.html',
+    styleUrls: ['./users.edit.component.css']
 })
 
-export class AddAdminUsersComponent implements OnInit 
+export class EditAdminUsersComponent implements OnInit 
 {
     orgNameModel = "";
     facilityNameRole ="";
@@ -35,7 +35,7 @@ export class AddAdminUsersComponent implements OnInit
     errorMessage ='';
     emailRegex = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'; 
     
-    AddNewUserForm = this.fb.group({
+    EditUserForm = this.fb.group({
         organizationName:  ['0', [Validators.required]],
         facilityName:  ['0', [Validators.required]],
         firstName: ['', [Validators.required]],
@@ -50,21 +50,54 @@ export class AddAdminUsersComponent implements OnInit
     })
     
     get f(): { [key: string]: AbstractControl } {
-        return this.AddNewUserForm.controls;
+        return this.EditUserForm.controls;
     }
     
     constructor( public authService: AuthService, public organizationService: OrganizationService, 
         public userRoleService: UserRolesService, public facilityService: FacilitiesService, 
         public userService:  UserService,
-        public fb: FormBuilder, private router: Router){  }
+        public fb: FormBuilder, private router: Router, private activatedRoute: ActivatedRoute){  }
 
     ngOnInit(): void 
     { 
         this.getOrganizationDropDownListData();       
         this.getFacilityDropDownListData();    
-        this.getUserRolesData();
+       // this.getUserRolesData();
+        this.getEditUserData();
     }    
-
+    getEditUserData(): void
+    {
+        var getId = this.activatedRoute.snapshot.paramMap.get('id');
+        this.userService.get(getId).subscribe({
+            next: data => {
+              console.log('Edit User data get:', JSON.stringify(data));       
+              if(data.status == 0)
+              {
+                this.collegeId = data.result.collegeId;
+                  this.getUserRolesData(); 
+                this.EditUserForm.setValue({
+                    organizationName: data.result.groupId,
+                    facilityName: data.result.collegeId,
+                    firstName: data.result.firstName,
+                    lastName: data.result.lastName,
+                    loginName: data.result.loginName,
+                    password: data.result.password,
+                    confirmPassword: data.result.password,
+                    userRoleName: data.result.roleId
+                  });  
+                               
+              }
+              else if (data.status == -1 || data.status == -2)
+              {
+                this.errorMessage = data.Error.Message;
+              }
+              
+            },
+            error: err => {
+              this.errorMessage = 'get edit user data failed.';        
+            }
+          });
+    }
     getOrganizationDropDownListData(): void 
     {
       this.organizationService.getOrganizations()
@@ -98,37 +131,40 @@ export class AddAdminUsersComponent implements OnInit
     }
     chngeOrgDropDown(e: any) {
         console.log(e.target.value);
-         if(e.target.value == "") { this.groupId = 0} else { this.groupId =  e.target.value};
+         if(e.target.value == "") { this.groupId = 0} 
+         else { this.groupId =  e.target.value; this.collegeId = 0; this.facilityNameRole ="";};
         this.getFacilityDropDownListData();
     }
     
     changeFacilityDropDown(e: any) {
         console.log(e.target.value);
-        if(e.target.value == "") { this.collegeId = 0} else { this.collegeId =  e.target.value};
+        if(e.target.value == "") 
+        { this.collegeId = 0} 
+        else { this.collegeId =  e.target.value; this.roleNameModel = "";};
         this.getUserRolesData();
     }
 
     submitForm() 
     {
         this.submitted = true;
-        if (this.AddNewUserForm.invalid) { return; }  
-        //console.log("Add New Form :" + JSON.stringify(this.AddNewUserForm.value));  
+        if (this.EditUserForm.invalid) { return; }  
+        //console.log("Add New Form :" + JSON.stringify(this.EditUserForm.value));  
         var param = 
         {
-          AdminUserId: 0,
-          LoginName: this.AddNewUserForm.value.loginName,
-          Password: this.AddNewUserForm.value.password,
-          FirstName: this.AddNewUserForm.value.firstName,
-          LastName: this.AddNewUserForm.value.lastName,
-          CollegeId: this.AddNewUserForm.value.facilityName,
+          AdminUserId: this.activatedRoute.snapshot.paramMap.get('id'),
+          LoginName: this.EditUserForm.value.loginName,
+          Password: this.EditUserForm.value.password,
+          FirstName: this.EditUserForm.value.firstName,
+          LastName: this.EditUserForm.value.lastName,
+          CollegeId: this.EditUserForm.value.facilityName,
           UserType: '',
-          RoleId:this.AddNewUserForm.value.userRoleName
+          RoleId:this.EditUserForm.value.userRoleName
         }
         console.log(param);
 
-        this.userService.createUser(param).subscribe({
+       this.userService.updateUser(param).subscribe({
           next: data => {
-            console.log('New User added:', JSON.stringify(data));       
+            console.log('Edit user :', JSON.stringify(data));       
             if(data.status == 0)
             {
               this.router.navigate(['adminusers']); 
@@ -141,7 +177,7 @@ export class AddAdminUsersComponent implements OnInit
           },
           error: err => {
             this.addRoleError = true;
-            this.errorMessage = 'Add New user Failed.';        
+            this.errorMessage = 'Edit user Failed.';        
           }
         });
     }

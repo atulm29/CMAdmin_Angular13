@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = CMAdmin.API
-build_property.ProjectDir = D:\GIT_REPO\CMAdmin\API\CMAdmin.API\
+build_property.ProjectDir = D:\GIT_REPO\CMAdmin_Angular13\API\CMAdmin.API\

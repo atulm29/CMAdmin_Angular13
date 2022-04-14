@@ -75,6 +75,7 @@ namespace CMAdmin.API
             services.AddTransient<ISemesterRepository, SemesterRepository>();
             services.AddTransient<ISubjectRepository, SubjectRepository>();
             services.AddTransient<IRoleMasterRepository, RoleMasterRepository>();
+            services.AddTransient<IStudentMasterRepository, StudentMasterRepository>();
 
             services.AddTransient<IDashboardService, DashboardService>();
             services.AddTransient<IOrganizationService, OrganizationService>();

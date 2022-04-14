@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A10j1xLPi3CAe2iFmhw5fxt3KZZpFSgAtvICMEIE98LWpjEXsv80RXgQR6eSAI3U9oFgOPY30nlOVUcmPLFozw==",
+  "dgSpecHash": "ffNTmqIRltoZB74ovqr+2gQfF7L38mZd+tKs8jjJif3uTGra3nU0T8r8MAx0IXLKmPnfySYh4MPgv07pl+e/CQ==",
   "success": true,
-  "projectFilePath": "D:\\GIT_REPO\\CMAdmin\\API\\CMAdmin.API\\CMAdmin.API.csproj",
+  "projectFilePath": "D:\\GIT_REPO\\CMAdmin_Angular13\\API\\CMAdmin.API\\CMAdmin.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.5\\microsoft.aspnetcore.authentication.jwtbearer.5.0.5.nupkg.sha512",

@@ -10,4 +10,5 @@ export class Users {
     departmentName?: string;
     deptSectionName?: string;
     roleName?: string;
+    groupId?: string;
 }
